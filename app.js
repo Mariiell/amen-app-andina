@@ -1,6 +1,6 @@
 
 const http = require('http');
-const VERSION = '1.0';
+const VERSION = '2.0';
 
 http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
