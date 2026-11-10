@@ -22,7 +22,7 @@ const cards = products.map(function (p) {
     '<button type="button" class="add-button" data-id="' + p.id + '" aria-label="Agregar ' + p.name + ' al carrito">+ Agregar</button></div></div></article>';
 }).join('');
 
-const page = String.raw\`<!DOCTYPE html>
+const page = String.raw`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -246,7 +246,7 @@ document.addEventListener('keydown',function(event){if(event.key==='Escape'&&pan
 renderCart();
 </script>
 </body>
-</html>\`.replace('__CARDS__', cards).replace('__PRODUCTS__', JSON.stringify(products)).replace('__VERSION__', VERSION);
+</html>`.replace('__CARDS__', cards).replace('__PRODUCTS__', JSON.stringify(products)).replace('__VERSION__', VERSION);
 
 http.createServer(function(req, res) {
   if (req.url === '/favicon.ico') {
